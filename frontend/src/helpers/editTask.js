@@ -1,7 +1,7 @@
-const addTask = async (url, data) => {
+const editTask = async (url, data) => {
   try {
     const response = await fetch(url, {
-      method: "POST",
+      method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
@@ -10,4 +10,4 @@ const addTask = async (url, data) => {
   }
 };
 
-export default addTask;
+export default editTask;
