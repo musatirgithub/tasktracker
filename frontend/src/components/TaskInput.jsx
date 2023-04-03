@@ -10,7 +10,10 @@ const TaskInput = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addTask(url, data);
+    setTask("");
+    setDateTime("");
   };
+
   return (
     <section>
       <form onSubmit={handleSubmit}>
