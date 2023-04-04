@@ -15,7 +15,7 @@ const TaskInput = () => {
   };
 
   return (
-    <section className="bg-darkgray lg:max-w-5xl mx-auto mb-3 pb-3">
+    <section className="bg-darkgray  mx-auto p-2 pb-3 mb-2 lg:max-w-5xl">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center justify-start gap-2 lg:flex-row lg:justify-evenly lg:items-end"
