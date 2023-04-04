@@ -36,7 +36,7 @@ const TaskInput = () => {
         </div>
         <div>
           <label htmlFor="dateTime" className="text-white block p-1">
-            Due date time
+            Deadline
           </label>
           <input
             type="datetime-local"

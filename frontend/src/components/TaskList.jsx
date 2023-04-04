@@ -32,18 +32,26 @@ const TaskList = () => {
     <section>
       {tasks.map((task) => {
         const { id, task_definition, is_done, due_time } = task;
+        const myDateTime = new Date(due_time);
         return (
-          <div key={id} className="bg-darkgray text-orange">
-            <p>{id}</p>
-            <p className="text-3xl font-bold underline">{task_definition}</p>
-            <p>{is_done}</p>
-            <p>{due_time}</p>
-            <button type="button" onClick={() => handleEdit(id)}>
-              Edit
-            </button>
-            <button type="button" onClick={() => handleDelete(id)}>
-              Delete
-            </button>
+          <div
+            key={id}
+            className="flex justify-between items-center bg-darkgray mb-1 p-2"
+          >
+            <div>
+              <p className="text-orange text-lg font-bold underline lg:text-2xl ">
+                {task_definition}
+              </p>
+              <p className="text-white text-sm lg:text-md">{`Deadline: ${myDateTime.toLocaleString()}`}</p>
+            </div>
+            <div>
+              <button type="button" onClick={() => handleEdit(id)}>
+                Edit
+              </button>
+              <button type="button" onClick={() => handleDelete(id)}>
+                Delete
+              </button>
+            </div>
           </div>
         );
       })}
