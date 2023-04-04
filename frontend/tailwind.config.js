@@ -20,6 +20,7 @@ module.exports = {
         red: "#E6ACAC",
         lightgray: "#e2e8f0",
         black: "#262626",
+        done: "#a1a1aa",
       },
     },
   },
