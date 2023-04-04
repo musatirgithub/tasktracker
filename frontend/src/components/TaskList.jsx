@@ -33,7 +33,7 @@ const TaskList = () => {
       {tasks.map((task) => {
         const { id, task_definition, is_done, due_time } = task;
         return (
-          <div key={id}>
+          <div key={id} className="bg-darkgray text-orange">
             <p>{id}</p>
             <p className="text-3xl font-bold underline">{task_definition}</p>
             <p>{is_done}</p>
