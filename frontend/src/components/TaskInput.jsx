@@ -15,11 +15,11 @@ const TaskInput = () => {
   };
 
   return (
-    <section className="bg-darkgray">
-      <h1 className="text-4xl bg-darkgray text-white text-center py-5">
-        Tasks
-      </h1>
-      <form onSubmit={handleSubmit} className="flex justify-evenly items-end">
+    <section className="bg-darkgray lg:max-w-5xl mx-auto mb-3 pb-3">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center justify-start gap-2 lg:flex-row lg:justify-evenly lg:items-end"
+      >
         <div>
           <label htmlFor="task" className="text-white block p-1">
             Task
@@ -31,7 +31,7 @@ const TaskInput = () => {
             value={task}
             onChange={(e) => setTask(e.target.value)}
             placeholder="Enter a new task..."
-            className="rounded-xl p-1 bg-lightgray w-96"
+            className="rounded-xl p-1 bg-lightgray w-96 lg:w-[38rem]"
           />
         </div>
         <div>
@@ -45,10 +45,13 @@ const TaskInput = () => {
             value={dateTime}
             onChange={(e) => setDateTime(e.target.value)}
             placeholder="Enter due date time..."
-            className="rounded-xl p-1 bg-lightgray w-36"
+            className="rounded-xl p-1 bg-lightgray w-96 lg:w-48"
           />
         </div>
-        <button type="submit" className="bg-orange text-white p-1 rounded-xl">
+        <button
+          type="submit"
+          className="bg-orange text-white p-1 rounded-xl w-24 mt-4 lg:mt-0"
+        >
           Add Task
         </button>
       </form>

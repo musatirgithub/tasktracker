@@ -1,6 +1,6 @@
 const deleteTask = async (url) => {
   try {
-    const response = await fetch(url, {
+    await fetch(url, {
       method: "DELETE",
     });
   } catch (error) {

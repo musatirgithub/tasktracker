@@ -3,7 +3,10 @@ import TaskList from "./TaskList";
 
 const Tasks = () => {
   return (
-    <section>
+    <section className="bg-black ">
+      <h1 className="text-4xl lg:max-w-5xl text-white text-center py-5 mx-auto">
+        Tasks
+      </h1>
       <TaskInput />
       <TaskList />
     </section>
