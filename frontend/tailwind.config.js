@@ -21,6 +21,7 @@ module.exports = {
         lightgray: "#e2e8f0",
         black: "#262626",
         done: "#a1a1aa",
+        bgverylight: "#737373",
       },
     },
   },

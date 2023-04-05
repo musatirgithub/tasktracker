@@ -12,3 +12,6 @@ class Task(models.Model):
 
     def __str__(self) -> str:
         return self.task_definition
+
+    class Meta:
+        ordering = ('due_time',)

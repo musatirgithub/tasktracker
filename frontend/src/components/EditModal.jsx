@@ -22,12 +22,12 @@ const EditModal = ({
     editTask(`${url}${id}/`, {
       task_definition: newTaskDefinition,
       is_done: newIsDone,
-      due_time: due_time,
+      due_time: newDueTime,
     });
     setIsEditOpen(false);
   };
   return (
-    <section className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-darkgray text-white max-w-5xl mx-1 p-2 pb-3 mb-2 lg:top-1/2">
+    <section className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bgverylight text-white max-w-5xl mx-1 p-2 pb-3 mb-2 lg:top-1/2">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center justify-start gap-2"
