@@ -3,6 +3,8 @@ import DateTimePicker from "react-datetime-picker";
 import "react-datetime-picker/dist/DateTimePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
+import editTask from "../helpers/editTask";
+const url = "http://127.0.0.1:8000/api/";
 
 const EditModal = ({
   id,
@@ -11,15 +13,23 @@ const EditModal = ({
   due_time,
   setIsEditOpen,
 }) => {
-  const conv = new Date(due_time);
-  const myDateTime = `${conv.getFullYear()}-${conv.getMonth()}-${conv.getDate()}T${conv.getHours()}:${conv.getMinutes()}`;
   const [newTaskDefinition, setNewTaskDefinition] = useState(task_definition);
   const [newDueTime, onChange] = useState(new Date(due_time));
   const [newIsDone, setNewIsDone] = useState(is_done);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    editTask(`${url}${id}/`, {
+      task_definition: newTaskDefinition,
+      is_done: newIsDone,
+      due_time: due_time,
+    });
+    setIsEditOpen(false);
+  };
   return (
     <section className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-darkgray text-white max-w-5xl mx-1 p-2 pb-3 mb-2 lg:top-1/2">
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className="flex flex-col items-center justify-start gap-2"
       >
         <div>
@@ -33,7 +43,7 @@ const EditModal = ({
             value={newTaskDefinition}
             onChange={(e) => setNewTaskDefinition(e.target.value)}
             placeholder="Enter a new task..."
-            className="rounded-xl p-1 bg-lightgray w-96"
+            className="rounded-xl text-black p-1 bg-lightgray w-96"
           />
         </div>
         <div>
@@ -41,7 +51,7 @@ const EditModal = ({
             Deadline
           </label>
           <DateTimePicker
-            className="rounded-xl p-1 bg-lightgray w-96"
+            className="rounded-xl p-1 bg-lightgray w-96 text-black"
             onChange={onChange}
             value={newDueTime}
           />
@@ -61,7 +71,6 @@ const EditModal = ({
         <button
           type="submit"
           className="bg-orange text-white p-1 rounded-xl w-24 mt-4"
-          onClick={() => setIsEditOpen(false)}
         >
           Save
         </button>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useFetchTasks } from "../helpers/useFetchTasks";
 
 import SingleTask from "./SingleTask";

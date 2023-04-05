@@ -1,6 +1,5 @@
 import { useState } from "react";
 import deleteTask from "../helpers/deleteTask";
-import editTask from "../helpers/editTask";
 import EditModal from "./EditModal";
 const url = "http://127.0.0.1:8000/api/";
 
@@ -12,13 +11,6 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
     deleteTask(url + id + "/");
   };
 
-  const handleEdit = (id) => {
-    editTask(url + id + "/", {
-      task_definition: "this is updated task",
-      due_time: "2023-04-24T20:45:00Z",
-    });
-    setIsEditOpen(true);
-  };
   return (
     <div
       key={id}
