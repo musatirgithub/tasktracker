@@ -24,5 +24,5 @@ export const useFetchTasks = (url) => {
   useEffect(() => {
     fetchTasks(url);
   }, [tasks]);
-  return { isError, isLoading, tasks };
+  return { isError, isLoading, tasks, fetchTasks };
 };

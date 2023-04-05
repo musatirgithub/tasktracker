@@ -22,6 +22,7 @@ module.exports = {
         black: "#262626",
         done: "#a1a1aa",
         bgverylight: "#737373",
+        deadlinepassed: "#9a3412",
       },
     },
   },
