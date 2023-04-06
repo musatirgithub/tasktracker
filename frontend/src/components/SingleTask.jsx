@@ -51,10 +51,10 @@ const SingleTask = ({
               ? "text-done text-sm lg:text-md line-through"
               : "text-white text-sm lg:text-md"
           }`}
-        >{`Deadline: ${myDateTime.toUTCString()}`}</p>
+        >{`Deadline: ${myDateTime.toUTCString().substring(0, 22)}`}</p>
         {currentDateTime > myDateTime && !is_done && (
           <p className="text-white text-sm font-bold lg:text-md">
-            Unfortunately deadline has already passed
+            Unfortunately deadline has passed
           </p>
         )}
         {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 &&
@@ -65,18 +65,18 @@ const SingleTask = ({
             </p>
           )}
       </div>
-      <div className="flex flex-wrap gap-1 justify-center items-center">
+      <div className="flex flex-wrap gap-2 justify-center items-center">
         <button
           type="button"
           onClick={() => setIsEditOpen(true)}
-          className="text-green text-center bg-white py-[0,5rem] rounded-xl w-[2.5rem]"
+          className="text-green text-center bg-white py-[0,5rem] rounded-xl w-[3rem]"
         >
           Edit
         </button>
         <button
           type="button"
           onClick={() => handleDelete(id)}
-          className="text-red text-center bg-white py-[0,5rem] rounded-xl w-[2.5rem]"
+          className="text-red text-center bg-white py-[0,5rem] rounded-xl w-[3rem]"
         >
           Del
         </button>
