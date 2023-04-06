@@ -38,11 +38,12 @@ const SingleTask = ({
               : "text-orange text-lg font-bold lg:text-2xl capitalize"
           }`}
         >
-          {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 && (
-            <span>
-              <BsFillExclamationTriangleFill className="inline pe-2 pb-1 w-[1.8rem]" />
-            </span>
-          )}
+          {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 &&
+            !is_done && (
+              <span>
+                <BsFillExclamationTriangleFill className="inline pe-2 pb-1 w-[1.8rem]" />
+              </span>
+            )}
           {task_definition}
         </p>
         <p
