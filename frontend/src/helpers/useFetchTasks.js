@@ -23,6 +23,6 @@ export const useFetchTasks = (url) => {
 
   useEffect(() => {
     fetchTasks(url);
-  }, [tasks]);
-  return { isError, isLoading, tasks, fetchTasks };
+  }, [isLoading]);
+  return { isError, isLoading, tasks };
 };

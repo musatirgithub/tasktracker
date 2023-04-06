@@ -15,46 +15,48 @@ const TaskInput = () => {
   };
 
   return (
-    <section className="bg-darkgray  mx-auto p-2 pb-3 mb-2 lg:max-w-5xl">
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col items-center justify-start gap-2 lg:flex-row lg:justify-evenly lg:items-end"
-      >
-        <div>
-          <label htmlFor="task" className="text-white block p-1">
-            Task
-          </label>
-          <input
-            type="text"
-            name="task"
-            id="task"
-            value={task}
-            onChange={(e) => setTask(e.target.value)}
-            placeholder="Enter a new task..."
-            className="rounded-xl p-1 bg-lightgray w-96 lg:w-[38rem]"
-          />
-        </div>
-        <div>
-          <label htmlFor="dateTime" className="text-white block p-1">
-            Deadline
-          </label>
-          <input
-            type="datetime-local"
-            name="dateTime"
-            id="dateTime"
-            value={dateTime}
-            onChange={(e) => setDateTime(e.target.value)}
-            placeholder="Enter due date time..."
-            className="rounded-xl p-1 bg-lightgray w-96 lg:w-48"
-          />
-        </div>
-        <button
-          type="submit"
-          className="bg-orange text-white p-1 rounded-xl w-24 mt-4 lg:mt-0"
+    <section className="bg-black mx-auto lg:max-w-5xl ">
+      <div className=" p-1">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-darkgray p-2 pb-3 mb-2  flex flex-col items-center justify-start gap-2 lg:flex-row lg:justify-evenly lg:items-end"
         >
-          Add Task
-        </button>
-      </form>
+          <div>
+            <label htmlFor="task" className="text-white block p-1">
+              Task
+            </label>
+            <input
+              type="text"
+              name="task"
+              id="task"
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+              placeholder="Enter a new task..."
+              className="rounded-xl p-1 bg-lightgray w-[20rem] lg:w-[38rem]"
+            />
+          </div>
+          <div>
+            <label htmlFor="dateTime" className="text-white block p-1">
+              Deadline
+            </label>
+            <input
+              type="datetime-local"
+              name="dateTime"
+              id="dateTime"
+              value={dateTime}
+              onChange={(e) => setDateTime(e.target.value)}
+              placeholder="Enter due date time..."
+              className="rounded-xl p-1 bg-lightgray w-[20rem] lg:w-48"
+            />
+          </div>
+          <button
+            type="submit"
+            className="bg-orange text-white p-1 rounded-xl w-24 mt-4 lg:mt-0"
+          >
+            Add Task
+          </button>
+        </form>
+      </div>
     </section>
   );
 };

@@ -15,7 +15,7 @@ const TaskList = () => {
   }
 
   return (
-    <section className="static mb-4 p-1 mx-auto lg:max-w-5xl">
+    <section className="mb-4 p-1 mx-auto lg:max-w-5xl">
       {tasks.map((task) => {
         return <SingleTask key={task.id} {...task} />;
       })}

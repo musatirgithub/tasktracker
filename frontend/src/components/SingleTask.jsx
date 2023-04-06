@@ -22,7 +22,7 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
       key={id}
       className="static flex justify-between items-center bg-darkgray mb-1 p-2"
     >
-      <div>
+      <div className=" w-[22rem]">
         <p
           className={`${
             is_done
@@ -34,7 +34,7 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
         >
           {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 && (
             <span>
-              <BsFillExclamationTriangleFill className="inline pe-2 pb-1" />
+              <BsFillExclamationTriangleFill className="inline pe-2 pb-1 w-[1.8rem]" />
             </span>
           )}
           {task_definition}
@@ -45,7 +45,7 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
               ? "text-done text-sm lg:text-md line-through"
               : "text-white text-sm lg:text-md"
           }`}
-        >{`Deadline: ${myDateTime.toLocaleString()}`}</p>
+        >{`Deadline: ${myDateTime.toUTCString()}`}</p>
         {currentDateTime > myDateTime && !is_done && (
           <p className="text-white text-sm font-bold lg:text-md">
             Unfortunately deadline has already passed
@@ -59,18 +59,18 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
             </p>
           )}
       </div>
-      <div>
+      <div className="flex flex-wrap gap-1 justify-center items-center">
         <button
           type="button"
           onClick={() => setIsEditOpen(true)}
-          className="text-green bg-white px-2 py-[0,5rem] rounded-xl me-1"
+          className="text-green text-center bg-white py-[0,5rem] rounded-xl w-[2.5rem]"
         >
           Edit
         </button>
         <button
           type="button"
           onClick={() => handleDelete(id)}
-          className="text-red bg-white px-2 py-[0,5rem] rounded-xl"
+          className="text-red text-center bg-white py-[0,5rem] rounded-xl w-[2.5rem]"
         >
           Del
         </button>
