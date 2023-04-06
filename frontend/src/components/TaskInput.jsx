@@ -14,6 +14,11 @@ const TaskInput = () => {
     setDateTime("");
   };
 
+  const handleTaskEntry = (e) => {
+    if (e.target.value.length > 30) {
+      setTask(e.target.value.substring(0, 30));
+    } else setTask(e.target.value);
+  };
   return (
     <section className="bg-black mx-auto lg:max-w-5xl ">
       <div className=" p-1">
@@ -30,7 +35,7 @@ const TaskInput = () => {
               name="task"
               id="task"
               value={task}
-              onChange={(e) => setTask(e.target.value)}
+              onChange={(e) => handleTaskEntry(e)}
               placeholder="Enter a new task..."
               className="rounded-xl p-1 bg-lightgray w-[20rem] lg:w-[38rem]"
             />

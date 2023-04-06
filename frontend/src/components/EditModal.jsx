@@ -26,6 +26,14 @@ const EditModal = ({
     });
     setIsEditOpen(false);
   };
+
+  const handleEditTask = (e) => {
+    if (e.target.value.length > 30) {
+      setNewTaskDefinition(e.target.value.substring(0, 30));
+    } else {
+      setNewTaskDefinition(e.target.value);
+    }
+  };
   return (
     <section className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-bgverylight text-white max-w-5xl mx-1 p-2 pb-3 mb-2 lg:top-1/2">
       <form
@@ -41,7 +49,7 @@ const EditModal = ({
             name="task"
             id="task"
             value={newTaskDefinition}
-            onChange={(e) => setNewTaskDefinition(e.target.value)}
+            onChange={(e) => handleEditTask(e)}
             placeholder="Enter a new task..."
             className="rounded-xl text-black p-1 bg-lightgray w-96"
           />
