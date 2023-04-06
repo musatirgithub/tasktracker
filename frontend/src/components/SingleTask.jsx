@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
-import deleteTask from "../helpers/deleteTask";
 import EditModal from "./EditModal";
 import { BsFillExclamationTriangleFill } from "react-icons/bs";
 
 const url = "http://127.0.0.1:8000/api/";
 
-const SingleTask = ({ id, task_definition, is_done, due_time }) => {
+const SingleTask = ({
+  id,
+  task_definition,
+  is_done,
+  due_time,
+  editTask,
+  deleteTask,
+}) => {
   const myDateTime = new Date(due_time);
   const [currentDateTime, setCurrentDateTime] = useState(null);
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -82,6 +88,7 @@ const SingleTask = ({ id, task_definition, is_done, due_time }) => {
           is_done={is_done}
           due_time={due_time}
           setIsEditOpen={setIsEditOpen}
+          editTask={editTask}
         />
       )}
     </div>

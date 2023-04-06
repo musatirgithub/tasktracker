@@ -1,7 +1,6 @@
 import { useState } from "react";
-import addTask from "../helpers/addTask";
 
-const TaskInput = () => {
+const TaskInput = ({ addTask }) => {
   const [task, setTask] = useState("");
   const [dateTime, setDateTime] = useState("");
   const url = "http://127.0.0.1:8000/api/";
@@ -15,8 +14,8 @@ const TaskInput = () => {
   };
 
   const handleTaskEntry = (e) => {
-    if (e.target.value.length > 30) {
-      setTask(e.target.value.substring(0, 30));
+    if (e.target.value.length > 25) {
+      setTask(e.target.value.substring(0, 25));
     } else setTask(e.target.value);
   };
   return (

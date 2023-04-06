@@ -3,7 +3,6 @@ import DateTimePicker from "react-datetime-picker";
 import "react-datetime-picker/dist/DateTimePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
-import editTask from "../helpers/editTask";
 const url = "http://127.0.0.1:8000/api/";
 
 const EditModal = ({
@@ -12,24 +11,49 @@ const EditModal = ({
   is_done,
   due_time,
   setIsEditOpen,
+  editTask,
 }) => {
   const [newTaskDefinition, setNewTaskDefinition] = useState(task_definition);
-  const [newDueTime, onChange] = useState(new Date(due_time));
+  const [newDueTime, onChange] = useState(
+    new Date(due_time.substring(0, due_time.length - 1))
+  );
   const [newIsDone, setNewIsDone] = useState(is_done);
+  const timeDiff = parseInt(
+    newDueTime
+      .toString()
+      .substring(
+        newDueTime.toString().indexOf("(") + 5,
+        newDueTime.toString().indexOf("(") + 7
+      )
+  );
+  const timeDiffOperator =
+    newDueTime
+      .toString()
+      .substring(
+        newDueTime.toString().indexOf("(") + 4,
+        newDueTime.toString().indexOf("(") + 5
+      ) == "+";
+  let dynamicDate = "";
+
+  if (timeDiffOperator) {
+    dynamicDate = new Date(newDueTime.getTime() + timeDiff * 60 * 60 * 1000);
+  } else {
+    dynamicDate = new Date(newDueTime.getTime() - timeDiff * 60 * 60 * 1000);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     editTask(`${url}${id}/`, {
       task_definition: newTaskDefinition,
       is_done: newIsDone,
-      due_time: newDueTime,
+      due_time: dynamicDate,
     });
     setIsEditOpen(false);
   };
 
   const handleEditTask = (e) => {
-    if (e.target.value.length > 30) {
-      setNewTaskDefinition(e.target.value.substring(0, 30));
+    if (e.target.value.length > 25) {
+      setNewTaskDefinition(e.target.value.substring(0, 25));
     } else {
       setNewTaskDefinition(e.target.value);
     }
