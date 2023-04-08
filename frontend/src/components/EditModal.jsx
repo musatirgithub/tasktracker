@@ -20,25 +20,25 @@ const EditModal = ({
   const [newIsDone, setNewIsDone] = useState(is_done);
   const timeDiff = parseInt(
     newDueTime
-      .toString()
+      ?.toString()
       .substring(
-        newDueTime.toString().indexOf("(") + 5,
-        newDueTime.toString().indexOf("(") + 7
+        newDueTime?.toString().indexOf("(") + 5,
+        newDueTime?.toString().indexOf("(") + 7
       )
   );
   const timeDiffOperator =
     newDueTime
-      .toString()
+      ?.toString()
       .substring(
-        newDueTime.toString().indexOf("(") + 4,
-        newDueTime.toString().indexOf("(") + 5
+        newDueTime?.toString().indexOf("(") + 4,
+        newDueTime?.toString().indexOf("(") + 5
       ) === "+";
   let dynamicDate = "";
 
   if (timeDiffOperator) {
-    dynamicDate = new Date(newDueTime.getTime() + timeDiff * 60 * 60 * 1000);
+    dynamicDate = new Date(newDueTime?.getTime() + timeDiff * 60 * 60 * 1000);
   } else {
-    dynamicDate = new Date(newDueTime.getTime() - timeDiff * 60 * 60 * 1000);
+    dynamicDate = new Date(newDueTime?.getTime() - timeDiff * 60 * 60 * 1000);
   }
 
   const handleSubmit = (e) => {
