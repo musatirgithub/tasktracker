@@ -3,7 +3,7 @@ import DateTimePicker from "react-datetime-picker";
 import "react-datetime-picker/dist/DateTimePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "react-clock/dist/Clock.css";
-const url = "http://127.0.0.1:8000/api/";
+const url = "https://forpythonanywhere1.pythonanywhere.com/api/";
 
 const EditModal = ({
   id,
@@ -32,7 +32,7 @@ const EditModal = ({
       .substring(
         newDueTime.toString().indexOf("(") + 4,
         newDueTime.toString().indexOf("(") + 5
-      ) == "+";
+      ) === "+";
   let dynamicDate = "";
 
   if (timeDiffOperator) {

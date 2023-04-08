@@ -1,13 +1,19 @@
 import SingleTask from "./SingleTask";
 
-const url = "http://127.0.0.1:8000/api/";
-
 const TaskList = ({ isError, isLoading, tasks, editTask, deleteTask }) => {
   if (isLoading) {
-    return <section>Loading...</section>;
+    return (
+      <section className="m-8 text-white text-center text-4xl font-bold">
+        Loading...
+      </section>
+    );
   }
   if (isError) {
-    return <section>Something went wrong...</section>;
+    return (
+      <section className="m-8 mx-auto text-white text-center text-4xl font-bold">
+        Something went wrong...
+      </section>
+    );
   }
 
   return (

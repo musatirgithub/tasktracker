@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import EditModal from "./EditModal";
 import { BsFillExclamationTriangleFill } from "react-icons/bs";
 
-const url = "http://127.0.0.1:8000/api/";
+const url = "https://forpythonanywhere1.pythonanywhere.com/api/";
 
 const SingleTask = ({
   id,

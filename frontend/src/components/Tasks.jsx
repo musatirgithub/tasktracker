@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TaskInput from "./TaskInput";
 import TaskList from "./TaskList";
-const baseurl = "http://127.0.0.1:8000/api/";
+const baseurl = "https://forpythonanywhere1.pythonanywhere.com/api/";
 
 const Tasks = () => {
   const [isLoading, setIsLoading] = useState(true);

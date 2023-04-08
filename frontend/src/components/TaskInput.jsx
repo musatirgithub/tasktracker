@@ -3,7 +3,7 @@ import { useState } from "react";
 const TaskInput = ({ addTask }) => {
   const [task, setTask] = useState("");
   const [dateTime, setDateTime] = useState("");
-  const url = "http://127.0.0.1:8000/api/";
+  const url = "https://forpythonanywhere1.pythonanywhere.com/api/";
   const data = { task_definition: task, due_time: dateTime };
 
   const handleSubmit = (e) => {
