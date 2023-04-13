@@ -38,7 +38,8 @@ const SingleTask = ({
               : "text-orange text-lg font-bold lg:text-2xl capitalize"
           }`}
         >
-          {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 &&
+          {currentDateTime &&
+            myDateTime - currentDateTime < 1000 * 60 * 60 * 51 &&
             !is_done && (
               <span>
                 <BsFillExclamationTriangleFill className="inline pe-2 pb-1 w-[1.8rem]" />
@@ -58,7 +59,8 @@ const SingleTask = ({
             Unfortunately deadline has passed
           </p>
         )}
-        {myDateTime.getUTCDate() - currentDateTime?.getUTCDate() < 2 &&
+        {currentDateTime &&
+          myDateTime - currentDateTime < 1000 * 60 * 60 * 51 &&
           currentDateTime < myDateTime &&
           !is_done && (
             <p className="text-white text-sm font-bold lg:text-md">
