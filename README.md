@@ -10,11 +10,11 @@
 
 ## The challenge
 
-Project aims to display my public github projects.
+Project aims to create a fullstack task tracker.
 
 ## Problem Statement
 
-- Develop an app which withdraw my public repos from github API, display them, allow users to search, filter and sort my projects.
+- Develop an api with Django which allows frontend to make CRUD operations. Also develop a frontend with React which interacts with Django backend.
 <hr>
 
 ## Screenshot
