@@ -5,6 +5,7 @@
 - [The challenge](#the-challenge)
 - [Screenshot](#screenshot)
 - [Built with](#built-with)
+- [Lesson Learned](#lesson-learned)
 - [Useful resources](#useful-resources)
 
 ## The challenge
