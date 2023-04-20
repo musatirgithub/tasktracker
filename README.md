@@ -10,7 +10,7 @@
 
 ## The challenge
 
-Project aims to create a fullstack task tracker.
+Project aims to create both frontend and backend of a task tracker app.
 
 ## Problem Statement
 
@@ -25,19 +25,20 @@ Project aims to create a fullstack task tracker.
 
 ### Project Information
 
-- Portfolio App is made by using React,
-- Projects are retrieved from Github API by using fetch method,
-- Users can search, filter and sort projects,
-- For providing multipage experience to user, React Router Dom is used,
-- For styling, traditidional CSS and Styled Components are used.
+- Task tracker App's backkend is made by using Django,
+- Task tracker App's frontend is made by using React,
+- Users can do all CRUD operations,
+- Tasks are ordered by deadline (in backend),
+- If task's dealine has passed or is within 2 days user gets a visual warning,
+- For styling, Tailwind CSS was used.
 
 ---
 
 I used;
 
+- Django
 - React
-- Styled Components
-- React Router
+- Tailwind CSS
 - Fetch Method
 
 ## Lesson Learned
