@@ -25,11 +25,11 @@ Project aims to create both frontend and backend of a task tracker app.
 
 ### Project Information
 
-- Task tracker App's backkend is made by using Django,
-- Task tracker App's frontend is made by using React,
+- Task tracker App's backend is coded with Django,
+- Task tracker App's frontend is coded with React ,
 - Users can do all CRUD operations,
-- Tasks are ordered by deadline (in backend),
-- If task's dealine has passed or is within 2 days user gets a visual warning,
+- Tasks are ordered by deadline (in the backend),
+- If task's dealine has passed or is within 2 days, user gets a visual warning,
 - For styling, Tailwind CSS was used.
 
 ---
