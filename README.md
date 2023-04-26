@@ -37,9 +37,12 @@ Project aims to create both frontend and backend of a task tracker app.
 I used;
 
 - Django
+- Django rest framework
+- Django-rest-auth
 - React
 - Tailwind CSS
 - Fetch Method (for all CRUD operations)
+- Python anywhere
 
 ## Lesson Learned
 
@@ -53,6 +56,7 @@ I used;
 - [DJANGO](https://www.djangoproject.com/)
 - [DJANGO REST FRAMEWORK](https://www.django-rest-framework.org/)
 - [DJANGO REST AUTH](https://django-rest-auth.readthedocs.io/en/latest/)
+- [PYTHON ANYWHERE](https://www.pythonanywhere.com/)
 - [TAILWIND CSS](https://tailwindcss.com/)
 
 <center> &#8987; Happy Coding  &#9997; </center>
