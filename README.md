@@ -39,7 +39,7 @@ I used;
 - Django
 - React
 - Tailwind CSS
-- Fetch Method
+- Fetch Method (for all CRUD operations)
 
 ## Lesson Learned
 
@@ -50,7 +50,9 @@ I used;
 - [W3 Schoold](https://www.w3schools.com/)
 - [MDN](https://developer.mozilla.org/en-US/)
 - [REACT](https://reactjs.org/)
-- [STYLED COMPONENTS](https://styled-components.com/)
-- [REACT ROUTER](https://reactrouter.com/en/main)
+- [DJANGO](https://www.djangoproject.com/)
+- [DJANGO REST FRAMEWORK](https://www.django-rest-framework.org/)
+- [DJANGO REST AUTH](https://django-rest-auth.readthedocs.io/en/latest/)
+- [TAILWIND CSS](https://tailwindcss.com/)
 
 <center> &#8987; Happy Coding  &#9997; </center>
