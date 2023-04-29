@@ -46,7 +46,7 @@ I used;
 
 ## Lesson Learned
 
-- At the planning phase considering the app as a simple one I've decided to create search, filter and sort as different components and used different useState hooks to keep these data. In the end it was complicated to manage all these states by passing props. For future apps it'll be better to keep these data in a global state.
+- Converting between django - javascript , local - UTC datetime was challenging. I've used 
 
 ### Useful resources
 
