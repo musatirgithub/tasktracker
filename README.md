@@ -46,7 +46,7 @@ I used;
 
 ## Lesson Learned
 
-- Converting between django - javascript , local - UTC datetime was challenging. I've used 
+- Converting between django - javascript , local - UTC datetime was challenging. I've used react-datetime-picker in order to convert datetime structure. And had to write some javascript code. I'm not sure I've used the best practice. So I will try to find out what kind of approach do professionals use.
 
 ### Useful resources
 
