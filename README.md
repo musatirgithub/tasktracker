@@ -20,7 +20,7 @@ Project aims to create both frontend and backend of a task tracker app.
 ## Screenshot
 
 <p align="center">
-<a href="https://portfolio-project-musatir.vercel.app/"><img src="portfolio-project.gif" alt="gif"></a>
+<a href="https://tasktracker-olive.vercel.app/"><img src="portfolio-project.gif" alt="gif"></a>
 </p>
 
 ### Project Information
